@@ -2,11 +2,14 @@ package com.shakirov.springboot311.service;
 
 import com.shakirov.springboot311.model.Role;
 import com.shakirov.springboot311.repo.RoleRepository;
+import org.springframework.stereotype.Service;
 
 import java.util.HashSet;
 import java.util.Set;
 
+@Service
 public class RoleServiceImpl implements RoleService{
+
     private final RoleRepository roleRepository;
 
     public RoleServiceImpl(RoleRepository roleRepository) {

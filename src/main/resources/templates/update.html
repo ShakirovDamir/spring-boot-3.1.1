@@ -6,11 +6,6 @@
     <title>Update</title>
 </head>
 <body>
-
-    <a th:href="@{/user}"> User info </a>
-    <br>
-    <a th:href="@{/logout}"> Logout </a>
-
 <h2>Edit user</h2>
 <div>
     <form th:action="@{/update}" method="post" th:object="${editUser}">
@@ -48,5 +43,7 @@
         <input type="submit" value="Update">
     </form>
 </div>
+<p><a th:href="@{/user}"> User info </a></p>
+<p><a th:href="@{/logout}"> Logout </a></p>
 </body>
 </html>
