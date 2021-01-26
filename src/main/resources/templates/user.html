@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<html lang="en">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:sec="http://www.springframework.org/security/tags">
+<head>
+    <meta charset="UTF-8">
+    <title>User information</title>
+</head>
+<body>
+<div>
+    <h2>Users information</h2>
+    <table border="2" th:object="${user}">
+        <tr>
+            <th>id</th>
+            <th>Name</th>
+            <th>Surname</th>
+            <th>Department</th>
+            <th>Salary</th>
+            <th>Password</th>
+            <th>Roles</th>
+        </tr>
+        <tr>
+            <td th:utext="${user.id}"></td>
+            <td th:utext="${user.username}"></td>
+            <td th:utext="${user.surname}"></td>
+            <td th:utext="${user.department}"></td>
+            <td th:utext="${user.salary}"></td>
+            <td th:utext="${user.password}"></td>
+            <td th:utext="${user.roles}"></td>
+        </tr>
+    </table>
+</div>
+<div>
+    <a th:href="@{/logout}"> Logout </a>
+</div>
+</body>
+</html>
