@@ -12,31 +12,36 @@
         <input type="hidden" name="id" th:value="${editUser.id}">
         <fieldset>
             <legend>Edit user</legend>
+
             <p>
-                <label th:for="name">Name </label>
-                <input type="text" name="name" th:id="name" th:value="${editUser.name}">
+                <label for="name">Name</label>
+                <input type="text" th:field="*{name}" id="name" th:value="${editUser.name}">
             </p>
+
             <p>
-                <label th:for="surname">Surname </label>
-                <input type="text" name="surname" th:id="surname" th:value="${editUser.surname}">
+                <label for="surname">Surname</label>
+                <input type="text" th:field="*{surname}" id="surname" th:value="${editUser.surname}">
             </p>
+
             <p>
-                <label th:for="department">Department </label>
-                <input type="text" name="department" th:id="department" th:value="${editUser.department}">
+                <label for="department">Department</label>
+                <input type="text" th:field="*{department}" id="department" th:value="${editUser.department}">
             </p>
+
             <p>
-                <label th:for="salary">Salary </label>
-                <input type="text" name="salary" th:id="salary" th:value="${editUser.salary}">
+                <label for="salary">Salary</label>
+                <input type="text" th:field="*{salary}" id="salary" th:value="${editUser.salary}">
             </p>
+
             <p>
-                <label th:for="password">Password </label>
-                <input type="text" name="password" th:id="password" th:value="${editUser.password}">
+                <label for="password">Password</label>
+                <input type="text" th:field="*{password}" id="password" th:value="${editUser.password}">
             </p>
+
             <p>
-                <label th:for="roles">Roles </label>
-                <select multiple name="roles" size="2" th:id="roles" required th:value="${editUser.roles}">
-                    <option disabled>Select roles</option>
-                    <option th:each="role : ${allRoles}" th:value="${role}" th:text="${role.role}"></option>
+                <select id="roles" name="roles" multiple size="2" required>
+                    <option th:each="role : ${allRoles}"
+                            th:value="${role}" th:text="${role.role}"></option>
                 </select>
             </p>
         </fieldset>

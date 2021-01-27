@@ -11,25 +11,26 @@
     <form th:action="@{/create}" method="post" th:object="${newUser}">
         <fieldset>
             <legend>Edit user</legend>
+
             <p>
-                <label th:for="name">Name </label>
-                <input type="text" name="name" th:id="name">
+                <label for="name">Name</label>
+                <input type="text" th:field="*{name}" id="name" placeholder="Enter a name">
             </p>
             <p>
-                <label th:for="surname">Surname </label>
-                <input type="text" name="surname" th:id="surname">
+                <label for="surname">Surname </label>
+                <input type="text" th:field="*{surname}" id="surname" placeholder="Enter a surname">
             </p>
             <p>
-                <label th:for="department">Department </label>
-                <input type="text" name="department" th:id="department">
+                <label for="department">Department </label>
+                <input type="text" th:field="*{department}" id="department" placeholder="Enter a department">
             </p>
             <p>
-                <label th:for="salary">Salary </label>
-                <input type="text" name="salary" th:id="salary">
+                <label for="salary">Salary </label>
+                <input type="text" th:field="*{salary}" id="salary" placeholder="Enter a salary">
             </p>
             <p>
-                <label th:for="password">Password </label>
-                <input type="text" name="password" th:id="password">
+                <label for="password">Password </label>
+                <input type="text" th:field="*{password}" id="password" placeholder="Enter a password">
             </p>
             <p>
                 <select id="roles" name="roles" multiple size="2" required>
