@@ -17,7 +17,7 @@ public class RoleServiceImpl implements RoleService{
     }
 
     @Override
-    public void createRoles(Set<Role> roles) { roleRepository.saveAll(roles); }
+    public void createRoles(Set<Role>roles) { roleRepository.saveAll(roles); }
 
     @Override
     public Set<Role> getAllRoles() {

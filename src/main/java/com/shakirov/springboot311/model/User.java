@@ -55,8 +55,6 @@ public class User implements UserDetails {
 
     public Set<Role> getRoles() { return roles; }
 
-    public void setRoles(Set<Role> roles) { this.roles = roles; }
-
     public void setRoles(String roles) {
         this.roles = new HashSet<>();
         if (roles.contains("ROLE_ADMIN")) {
@@ -66,7 +64,6 @@ public class User implements UserDetails {
             this.roles.add(new Role("ROLE_USER"));
         }
     }
-
 
     //методы UserDetails
 
