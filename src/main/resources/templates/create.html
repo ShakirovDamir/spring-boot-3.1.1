@@ -33,9 +33,13 @@
                 <input type="text" th:field="*{password}" id="password" placeholder="Enter a password">
             </p>
             <p>
-                <select id="roles" name="roles" multiple size="2" required>
-                    <option th:each="role : ${allRoles}"
-                            th:value="${role}" th:text="${role.role}"></option>
+<!--                <select id="roles" name="roles" multiple size="2" required>-->
+<!--                    <option th:each="role : ${allRoles}"-->
+<!--                            th:value="${role}" th:text="${role.role}"></option>-->
+<!--                </select>-->
+                <select multiple name="roles" size="2" th:id="roles" required>
+                    <option disabled>Select roles</option>
+                    <option th:each="role : ${allRoles}" th:value="${role}" th:text="${role.role}"></option>
                 </select>
             </p>
         </fieldset>
