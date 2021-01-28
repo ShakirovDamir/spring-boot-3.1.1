@@ -25,13 +25,13 @@ public class AdminController {
     }
 
     @GetMapping("/admin")
-    public String AdminPage(Model model) {
+    public String MainPage(Model model) {
         model.addAttribute("users", userService.listUsers());
         return "admin";
     }
 
     @GetMapping("/create")
-    public String getCreatePage(ModelMap model) {
+    public String createPage(ModelMap model) {
         model.addAttribute("allRoles", roleService.getAllRoles());
         model.addAttribute("newUser", new User());
         return "create";
